@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <div class="container">
+
+        <h1 class="display-4">
+            Сделки
+        </h1>
+
+        <div class="controllerOrder">
+            <div>
+                <input class="btn-check" type="radio" id="typeOrderChoice1" name="typeOrder" value="title_asc" checked />
+                <label class="btn btn-outline-secondary" for="typeOrderChoice1">По наименованию (по возрастанию)</label>
+
+                <input class="btn-check" type="radio" id="typeOrderChoice2" name="typeOrder" value="title_desc" />
+                <label class="btn btn-outline-secondary" for="typeOrderChoice2">По наименованию (по убыванию)</label>
+      
+                <input class="btn-check" type="radio" id="typeOrderChoice3" name="typeOrder" value="price_asc" />
+                <label class="btn btn-outline-secondary" for="typeOrderChoice3">По бюджету (по возрастанию)</label>
+
+                <input class="btn-check" type="radio" id="typeOrderChoice4" name="typeOrder" value="price_desc" />
+                <label class="btn btn-outline-secondary" for="typeOrderChoice4">По бюджету (по убыванию)</label>
+            </div>
+        </div>
+
+
+        <div class="tableLeads">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Название сделки</th>
+                        <th>Бюджет сделки</th>
+                        <th>Дата и время создания сделки</th>
+                        <th>Ответственный</th>
+                    </tr>
+                </thead>
+                <tbody class="tbodyElement">
+    
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="controllerQuantityLeads">
+            <p>Количество сделок на странице</p>
+
+            <div>
+                <input type="radio" id="quantityLeadsChoice1" name="quantityLeads" value="2" checked />
+                <label for="quantityLeadsChoice1">2</label>
+      
+                <input type="radio" id="quantityLeadsChoice2" name="quantityLeads" value="5" />
+                <label for="quantityLeadsChoice2">5</label>
+            
+                <input type="radio" id="quantityLeadsChoice3" name="quantityLeads" value="10" />
+                <label for="quantityLeadsChoice3">10</label>
+    
+                <input type="radio" id="quantityLeadsChoice4" name="quantityLeads" value="all" />
+                <label for="quantityLeadsChoice4">Все</label>
+            </div>
+        </div>
+
+        
+        <div class="pagination">
+            <input class="pagination_btn pagination_btn_prev btn btn-info" type="button" value="<<Назад" >
+            <input class="pagination_btn pagination_btn_next btn btn-info" type="button" value="Вперед>>" >
+        </div>
+
+    </div>
+
+   
+    <script src="./script.js"></script>
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pagination_btn {
+            margin: 5px;
+        }
+
+        .pagination_btn_inactive {
+            display: none;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        .controllerQuantityLeads p {
+            margin-bottom: 5px;
+        }
+
+        .controllerQuantityLeads {
+            text-align: right;
+        }
+
+        .tableLeads {
+            margin-top: 10px;
+        }
+
+    </style>
+
+
+</body>
+</html>
+
