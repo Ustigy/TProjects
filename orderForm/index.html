@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="margin: 25px auto; width: 50%;">
+        <form action="/handler.php" method="POST" enctype="form/data">
+        
+            <div class="form__input_wrapper form-group">
+                <label for="name">
+                    Имя
+                </label>
+                <div>
+                    <input required type="text" class="form-control" id="name" name="name" placeholder="Ваше имя">
+                </div>
+            </div>
+
+            <div class="form__input_wrapper form-group">
+                <label for="phone">
+                    Номер телефона
+                </label>
+                <div>
+                    <input required type="tel" class="form-control" id="phone" name="phone" placeholder="Ваш номер телефона">
+                </div>
+            </div>
+
+            <!-- Скрытое поле со значением test  -->
+            <div class="form__input_wrapper">
+                <input hidden value="test" type="text" name="hidden_field">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Отправить
+            </button>
+
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="jquery.maskedinput.js"></script>
+    <script>
+        $(function(){
+            $("#phone").mask("+7(999)999-99-99");
+        });
+    </script>
+
+</body>
+</html>
